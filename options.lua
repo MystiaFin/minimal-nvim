@@ -9,14 +9,19 @@ vim.o.tabstop = 2
 -- General options
 vim.o.swapfile = false
 vim.o.clipboard = "unnamedplus"
+vim.opt.guicursor = ""
 
 -- Keymaps
 vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 -- Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- Neorg
+vim.keymap.set('n', "<leader>n", ":Neorg workspace notes<CR>")

@@ -12,5 +12,8 @@ require("nvim-ts-autotag").setup({
 		["jsx"] = {
 			enable_close = true,
 		},
+		["tsx"] = {
+			enable_close = true,
+		},
 	},
 })
