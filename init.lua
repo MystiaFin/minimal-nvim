@@ -1,24 +1,23 @@
--- Helper function to load config files with absolute paths
-local function load_config(path)
-	dofile(vim.fn.stdpath('config') .. '/' .. path .. '.lua')
-end
-
--- Essentials
-load_config('plugins')
-load_config('options')
+require('plugins')
+require('options')
 
 -- Initialize plugins
 require("oil").setup()
 require("mason").setup()
 require("telescope").setup()
 require("mason-lspconfig").setup()
+require("ibl").setup()
 
 -- User config
-load_config('config/treesitter')
-load_config('config/lsp')
-load_config('config/lualine')
-load_config('config/catppuccin')
-load_config('config/presence')
-load_config('config/autopairs')
-load_config('config/autotag')
-load_config('config/neorg')
+require('config/treesitter')
+require('config/lsp')
+require('config/lualine')
+require('config/catppuccin')
+require('config/presence')
+require('config/autopairs')
+require('config/autotag')
+require('config/neorg')
+require('config/harpoon')
+require('config/noice')
+require('config/neoscroll')
+require('config/gitsigns')

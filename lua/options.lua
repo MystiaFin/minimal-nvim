@@ -9,12 +9,16 @@ vim.o.tabstop = 2
 -- General options
 vim.o.swapfile = false
 vim.o.clipboard = "unnamedplus"
-vim.opt.guicursor = ""
+vim.o.guicursor = ""
 
 -- Keymaps
 vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>w", ":w<CR>")
+
+-- Close the LSP location/definition list quickly
+vim.keymap.set("n", "<leader>gq", "<C-w>j<C-w>q", { desc = "Close lower window" })
 
 -- Telescope
 local builtin = require('telescope.builtin')
