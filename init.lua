@@ -3,9 +3,7 @@ require('options')
 
 -- Initialize plugins
 require("oil").setup()
-require("mason").setup()
 require("telescope").setup()
-require("mason-lspconfig").setup()
 require("ibl").setup()
 
 -- User config
