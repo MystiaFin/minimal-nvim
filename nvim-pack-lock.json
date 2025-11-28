@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "dashboard-nvim": {
+      "rev": "0775e567b6c0be96d01a61795f7b64c1758262f6",
+      "src": "https://github.com/nvimdev/dashboard-nvim"
+    },
     "gitsigns.nvim": {
       "rev": "cdafc320f03f2572c40ab93a4eecb733d4016d07",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
@@ -19,6 +23,14 @@
     "lualine.nvim": {
       "rev": "3946f0122255bc377d14a59b27b609fb3ab25768",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "mason": {
+      "rev": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800",
+      "src": "https://github.com/williamboman/mason.nvim"
+    },
+    "mason-lspconfig": {
+      "rev": "7d527c76c43f46294de9c19d39c5a86317809b4b",
+      "src": "https://github.com/williamboman/mason-lspconfig.nvim"
     },
     "mason-lspconfig.nvim": {
       "rev": "b1d9a914b02ba5660f1e272a03314b31d4576fe2",

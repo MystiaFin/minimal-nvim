@@ -32,3 +32,4 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 vim.keymap.set('n', "<leader>n", ":Neorg workspace notes<CR>")
 
 vim.o.winborder = "rounded"
+

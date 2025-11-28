@@ -20,4 +20,19 @@ require("noice").setup({
 		inc_rename = true,
 		lsp_doc_border = true,
 	},
+	views = {
+		cmdline_popup = {
+			position = {
+				col = "50%",
+				row = "50%"
+			},
+			border = {
+				style = "rounded",
+				padding = { 0, 1 },
+			},
+			win_options = {
+				winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
+			},
+		},
+	},
 })
