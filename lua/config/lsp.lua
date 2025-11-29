@@ -1,5 +1,4 @@
 require('mason').setup()
--- Mason setup
 require("mason-lspconfig").setup({
 	automatic_installation = true,
 	ensure_installed = {
@@ -11,7 +10,6 @@ require("mason-lspconfig").setup({
 	}
 })
 
--- Configure diagnostic display
 vim.diagnostic.config({
 	virtual_text = true,
 	signs = true,
@@ -38,12 +36,8 @@ vim.lsp.config.intelephense = {
 	root_markers = { "composer.json", ".git" },
 	settings = {
 		intelephense = {
-			files = {
-				maxSize = 5000000,
-			},
-			environment = {
-				phpVersion = "8.2",
-			},
+			files = { maxSize = 5000000 },
+			environment = { phpVersion = "8.2" },
 		},
 	},
 }
@@ -75,12 +69,21 @@ vim.lsp.config.tailwindcss = {
 	},
 }
 
+vim.lsp.config.qmlls = {
+	cmd = { "/usr/lib/qt6/bin/qmlls" },
+	filetypes = { "qmljs", "qml" },
+	cmd_env = {
+		QML_IMPORT_PATH = "/usr/lib/qt6/qml"
+	},
+}
+
 vim.lsp.enable({
 	"lua_ls",
 	"intelephense",
 	"html",
 	"cssls",
-	"tailwindcss"
+	"tailwindcss",
+	"qmlls"
 })
 
 vim.filetype.add({
